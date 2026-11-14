@@ -1,0 +1,16 @@
+[Unit]
+Description=kotel-rf: rádiová brána kotle (CC1101, náhrada ovladače Siemens QAA78)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+EnvironmentFile=/etc/kotel-rf.env
+WorkingDirectory=/opt/kotel-rf
+ExecStart=/usr/bin/python3 -u /opt/kotel-rf/kotel_rf.py serve
+Restart=always
+RestartSec=5
+TimeoutStopSec=10
+
+[Install]
+WantedBy=multi-user.target

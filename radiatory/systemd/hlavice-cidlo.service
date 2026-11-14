@@ -1,0 +1,17 @@
+[Unit]
+Description=hlavice-cidlo: Sonoff TRVZB podle pokojového čidla (zigbee2mqtt)
+After=network-online.target mosquitto.service zigbee2mqtt.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=hlavice
+ExecStart=/usr/bin/python3 -u /opt/hlavice-cidlo/hlavice_cidlo.py -c /etc/hlavice-cidlo.conf
+Restart=always
+RestartSec=20
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+
+[Install]
+WantedBy=multi-user.target

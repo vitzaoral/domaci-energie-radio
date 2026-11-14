@@ -1,0 +1,7 @@
+{"time" : "2026-11-01T08:00:00+0100", "model" : "ApatorMetra-ERM30", "id" : "123456789", "len" : 19, "volume_m3" : "254.321", "date" : "2026-11-01", "mic" : "CRC", "rssi" : -0.4, "snr" : 22.1, "noise" : -28.3}
+{"time" : "2026-11-01T08:01:00+0100", "model" : "ApatorMetra-ERM30", "id" : "987654321", "len" : 19, "volume_m3" : "1.500", "date" : "2026-10-01", "mic" : "CRC", "rssi" : -6.2, "snr" : 15.0, "noise" : -28.0}
+{"time" : "2026-11-01T08:01:30+0100", "model" : "Somfy-RTS", "id" : "abc123", "button" : "Up"}
+{"time" : "2026-11-01T08:02:00+0100", "model" : "ApatorMetra-ERM30", "id" : "123456789", "len" : 19, "volume_m3" : "254.321", "date" : "2026-11-01", "mic" : "CRC", "rssi" : -0.6, "snr" : 21.8, "noise" : -28.1}
+{"time" : "2026-11-01T08:03:00+0100", "model" : "ApatorMetra-ERM30", "id" : "????????", "len" : 19, "volume_m3" : "?????.???", "date" : "????-??-??", "mic" : "CRC"}
+not json at all
+{"time" : "2026-11-01T08:04:00+0100", "model" : "ApatorMetra-ERM30", "id" : "123456789", "len" : 19, "volume_m3" : "254.338", "date" : "2026-11-01", "mic" : "CRC", "rssi" : -0.5, "snr" : 22.0, "noise" : -28.2}

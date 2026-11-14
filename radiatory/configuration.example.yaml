@@ -1,0 +1,34 @@
+# zigbee2mqtt – výřez configuration.yaml pro hlavice Sonoff TRVZB a koordinátor Sonoff ZBDongle-E.
+# Klíče sítě (network_key, pan_id, ext_pan_id) nechte na GENERATE: z2m je vygeneruje
+# a zapíše sem. Pak tento soubor NIKDY nezveřejňujte ani necommitujte.
+version: 5
+homeassistant:
+  enabled: false
+permit_join: false               # párovat jen krátce z webu (Permit join)
+mqtt:
+  base_topic: zigbee2mqtt
+  server: mqtt://127.0.0.1:1883
+  user: z2m
+  password: nahradte-heslem
+serial:
+  port: /dev/serial/by-id/usb-ITead_Sonoff_Zigbee_3.0_USB_Dongle_Plus_XXXX-if00-port0
+  adapter: ember                 # ZBDongle-E (EFR32MG21); ZBDongle-P je zstack
+frontend:
+  enabled: true
+  host: 127.0.0.1                # web jen místně (ssh -L 8080:127.0.0.1:8080 pi)
+  port: 8080
+  auth_token: nahradte-tokenem
+availability:
+  enabled: true
+  passive:
+    timeout: 1500                # TRVZB je spící zařízení, hlásí se nejpozději po hodině
+device_options:
+  retain: true
+advanced:
+  channel: 25                    # zvolte kanál co nejdál od Wi-Fi (Wi-Fi 1 -> Zigbee 25); měnit jen před párováním
+  network_key: GENERATE
+  pan_id: GENERATE
+  ext_pan_id: GENERATE
+  last_seen: ISO_8601            # hlavice-cidlo podle něj pozná stáří měření čidla
+  log_output:
+    - console

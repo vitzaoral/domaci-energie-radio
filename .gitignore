@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+# místní konfigurace a tajné údaje / local config and secrets
+*.env
+!*.env.example
+config.ini
+/etc/
+configuration.yaml
+database.db
+coordinator_backup.json
+*.jsonl
+!vodomer/tests/sample-rtl433.jsonl
+*.log

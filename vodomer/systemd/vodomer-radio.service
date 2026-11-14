@@ -1,0 +1,21 @@
+[Unit]
+Description=vodomer-radio: odečet vodoměru Apator Metra E-RM 30 přes RTL-SDR
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=vodomer
+SupplementaryGroups=plugdev
+ExecStart=/usr/bin/python3 /opt/vodomer-radio/vodomer_radio.py -c /etc/vodomer-radio.conf
+Restart=always
+RestartSec=20
+Nice=10
+MemoryMax=200M
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+
+[Install]
+WantedBy=multi-user.target

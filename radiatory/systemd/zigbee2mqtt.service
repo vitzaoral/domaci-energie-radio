@@ -1,0 +1,22 @@
+[Unit]
+Description=zigbee2mqtt
+After=network-online.target mosquitto.service
+Wants=network-online.target
+Requires=mosquitto.service
+
+[Service]
+Environment=NODE_ENV=production
+Type=notify
+ExecStart=/usr/bin/node index.js
+WorkingDirectory=/opt/zigbee2mqtt
+WatchdogSec=10s
+Restart=always
+RestartSec=10s
+User=zigbee2mqtt
+Group=zigbee2mqtt
+SupplementaryGroups=dialout
+# Raspberry Pi Zero 2 W má 512 MB RAM, z2m si vezme 100–150 MB
+MemoryMax=300M
+
+[Install]
+WantedBy=multi-user.target

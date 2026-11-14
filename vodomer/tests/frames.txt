@@ -1,0 +1,6 @@
+# Syntetické (vymyšlené) rámce Apator Metra E-RM 30 ve formátu rtl_433 -y.
+# Vyrobeny pro test, neodpovídají žádnému skutečnému vodoměru.
+# modul 123456789, stav 254,321 m3, datum 2026-11-01
+{224}aaaaaaaa699aec2eb861ac5838e6faffffffffffffffc812ffff696e
+# modul 987654321, stav 1,500 m3, datum 2026-10-01
+{224}aaaaaaaa699aec5d80cec3c5b724faffffffffffffff2812ffff2715
